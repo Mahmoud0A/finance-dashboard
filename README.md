@@ -1,6 +1,6 @@
 # FinSight — Personal Finance Dashboard
 
-**Live Demo:** https://finance-dashboard-xi-ecru-77.vercel.app
+**Live Demo:** https://tryfinsight.vercel.app
 
 A responsive personal finance dashboard built with **Next.js 15**, **TypeScript**, and a deliberate multi-layer state management architecture. This project demonstrates practical use of Context API, Zustand, and TanStack Query side-by-side — each serving a distinct architectural purpose.
 
@@ -158,7 +158,7 @@ npm run storybook
 
 ## Screenshots
 
-Live demo: https://finance-dashboard-xi-ecru-77.vercel.app
+Live demo: https://tryfinsight.vercel.app
 
 ![English dashboard with derived totals, monthly chart and budgets](docs/screenshots/dashboard-en.png)
 
