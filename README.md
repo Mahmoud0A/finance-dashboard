@@ -1,5 +1,7 @@
 # FinSight — Personal Finance Dashboard
 
+**Live Demo:** https://finance-dashboard-xi-ecru-77.vercel.app
+
 A responsive personal finance dashboard built with **Next.js 15**, **TypeScript**, and a deliberate multi-layer state management architecture. This project demonstrates practical use of Context API, Zustand, and TanStack Query side-by-side — each serving a distinct architectural purpose.
 
 > **Note:** All financial data is mock/static. No real banking integrations, no external APIs, no authentication required.
@@ -11,13 +13,13 @@ A responsive personal finance dashboard built with **Next.js 15**, **TypeScript*
 | Area | Details |
 |------|---------|
 | 📊 **Dashboard** | Balance overview, income vs expenses bar chart (SVG), budget progress bars, recent transactions |
-| 💸 **Transactions** | Filterable/searchable list fetched via TanStack Query from a Next.js API route |
-| 🏦 **Accounts** | Account cards with balance and account type |
-| 📅 **Budgets** | Budget progress per category |
+| 💸 **Transactions** | Filterable/searchable list via TanStack Query; creation via `POST /api/transactions` + `useMutation` with query invalidation |
+| 🏦 **Accounts** | Account balances served from `/api/accounts` and updated by new transactions |
+| 📅 **Budgets** | Per-category limits with spent amounts derived from real transaction data |
 | 🌐 **i18n** | Full English / Arabic UI with RTL layout switching |
 | 🎨 **Theme** | Light / Dark mode toggle persisted in context |
 | 📱 **Responsive** | Mobile-first layout with collapsible sidebar and bottom navigation |
-| ✅ **Forms** | Transaction form with React Hook Form + Zod validation and error messages |
+| ✅ **Forms** | Transaction form (type/amount/category/account/date/note) with React Hook Form + Zod; valid submissions persist via the mock API |
 
 ---
 
@@ -31,7 +33,7 @@ A responsive personal finance dashboard built with **Next.js 15**, **TypeScript*
 | **Tailwind CSS v4** | Utility-first styling |
 | **Context API** | Theme (light/dark) and i18n locale — local shared state |
 | **Zustand** | Dashboard UI preferences (widget order, sidebar, compact mode) — global persistent state |
-| **TanStack Query v5** | Fetching transactions from `/api/transactions` — server/async state |
+| **TanStack Query v5** | Queries for transactions/accounts/budgets/summary + `useMutation` for creation with invalidation — server/async state |
 | **React Hook Form v7** | Transaction form state and submission |
 | **Zod** | Schema validation for the transaction form |
 | **Recharts** | Dependency available; SVG chart currently used inline for full RTL compatibility |
@@ -64,8 +66,10 @@ This project intentionally demonstrates multiple state patterns:
 │  state            │  + persist()      │  widget order, compact     │
 │                   │                   │  mode, selected period     │
 ├──────────────────────────────────────────────────────────────────┤
-│  Server / async   │  TanStack Query   │  Transactions fetched from │
-│  state            │                   │  /api/transactions route   │
+│  Server / async   │  TanStack Query   │  Queries for transactions /   │
+│  state            │                   │  accounts / budgets / summary │
+│                   │                   │  + useMutation (POST) with    │
+│                   │                   │  invalidation on success      │
 └──────────────────────────────────────────────────────────────────┘
 ```
 
@@ -160,7 +164,7 @@ npm run storybook
 
 ## Limitations
 
-- All data is static/mock. No backend persistence.
+- All financial data is mock data served by Next.js API routes. Transaction creation works end-to-end (POST + in-memory update + invalidation), but mutations are not persisted across redeploys or serverless instance recycles.
 - No authentication or user accounts.
 - Recharts is installed as a dependency; the current income chart uses inline SVG for reliable RTL rendering. Recharts integration can be added without architectural changes.
 - Language preference is not persisted across page refreshes (intentional: demonstrates in-session Context state vs. Zustand persistence).
