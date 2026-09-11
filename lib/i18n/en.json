@@ -1,0 +1,75 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "transactions": "Transactions",
+    "budgets": "Budgets",
+    "accounts": "Accounts",
+    "settings": "Settings",
+    "goals": "Goals"
+  },
+  "dashboard": {
+    "totalBalance": "Total Balance",
+    "monthlyIncome": "Monthly Income",
+    "monthlyExpenses": "Monthly Expenses",
+    "savings": "Savings",
+    "budgetRemaining": "Budget Remaining",
+    "recentTransactions": "Recent Transactions",
+    "incomeVsExpenses": "Income vs Expenses",
+    "expensesByCategory": "Expenses by Category",
+    "budgetOverview": "Budget Overview",
+    "accountsOverview": "Accounts Overview",
+    "monthlyTrend": "Monthly trend for 2025",
+    "updatedJustNow": "Updated just now",
+    "viewAll": "View all",
+    "overview": "Overview"
+  },
+  "transactions": {
+    "title": "Transactions",
+    "searchPlaceholder": "Search transactions...",
+    "filterByCategory": "Filter by category",
+    "filterByAccount": "Filter by account",
+    "filterByType": "Filter by type",
+    "sortBy": "Sort by",
+    "addTransaction": "Add Transaction",
+    "results": "Results",
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "budget": {
+    "title": "Budgets",
+    "spent": "Spent",
+    "remaining": "Remaining",
+    "limit": "Limit",
+    "food": "Food",
+    "transportation": "Transportation",
+    "shopping": "Shopping",
+    "entertainment": "Entertainment",
+    "bills": "Bills"
+  },
+  "settings": {
+    "title": "Settings",
+    "theme": "Theme",
+    "language": "Language",
+    "compactMode": "Compact Mode",
+    "resetLayout": "Reset Layout",
+    "dashboardPreferences": "Dashboard Preferences"
+  },
+  "common": {
+    "amount": "Amount",
+    "date": "Date",
+    "description": "Description",
+    "category": "Category",
+    "account": "Account",
+    "income": "Income",
+    "expense": "Expense",
+    "save": "Save",
+    "cancel": "Cancel",
+    "overview": "Overview",
+    "monthlyTrend": "Monthly trend for 2025",
+    "viewAll": "View all",
+    "updatedJustNow": "Updated just now",
+    "salaryFreelance": "Salary + freelance",
+    "foodTransportShopping": "Food, transport, shopping",
+    "accountsLinked": "accounts linked"
+  }
+}

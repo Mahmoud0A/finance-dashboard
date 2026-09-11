@@ -1,0 +1,57 @@
+- generic [ref=f11e4]:
+  - complementary [ref=f11e5]:
+    - generic [ref=f11e6]:
+      - generic [ref=f11e7]:
+        - button "Toggle sidebar" [ref=f11e8]
+        - generic [ref=f11e11]: FinSight
+      - navigation [ref=f11e12]:
+        - link "Dashboard" [ref=f11e13] [cursor=pointer]:
+          - /url: /
+        - link "Transactions" [ref=f11e20] [cursor=pointer]:
+          - /url: /transactions
+        - link "Accounts" [ref=f11e25] [cursor=pointer]:
+          - /url: /accounts
+        - link "Budgets" [ref=f11e30] [cursor=pointer]:
+          - /url: /budgets
+      - link "Settings" [ref=f11e36] [cursor=pointer]:
+        - /url: /settings
+  - main [ref=f11e41]:
+    - generic [ref=f11e43]:
+      - generic [ref=f11e44]:
+        - heading "Dashboard" [level=1] [ref=f11e45]
+        - generic [ref=f11e46]: August 2025
+      - generic [ref=f11e47]:
+        - button "Toggle language" [ref=f11e48]:
+          - generic [ref=f11e52]: EN
+        - button "Toggle theme" [ref=f11e53]
+    - generic [ref=f11e57]:
+      - generic [ref=f11e58]:
+        - heading "Budgets" [level=1] [ref=f11e59]
+        - generic [ref=f11e60]: August 2025
+      - generic [ref=f11e61]:
+        - generic [ref=f11e62]:
+          - generic [ref=f11e63]:
+            - generic [ref=f11e64]: Food
+            - generic [ref=f11e65]: $420 / $600
+          - generic [ref=f11e68]: 70% used - $180 remaining
+        - generic [ref=f11e69]:
+          - generic [ref=f11e70]:
+            - generic [ref=f11e71]: Transportation
+            - generic [ref=f11e72]: $120 / $200
+          - generic [ref=f11e75]: 60% used - $80 remaining
+        - generic [ref=f11e76]:
+          - generic [ref=f11e77]:
+            - generic [ref=f11e78]: Entertainment
+            - generic [ref=f11e79]: $35 / $150
+          - generic [ref=f11e82]: 23% used - $115 remaining
+        - generic [ref=f11e83]:
+          - generic [ref=f11e84]:
+            - generic [ref=f11e85]: Shopping
+            - generic [ref=f11e86]: $89.5 / $300
+          - generic [ref=f11e89]: 30% used - $210.5 remaining
+        - generic [ref=f11e90]:
+          - generic [ref=f11e91]:
+            - generic [ref=f11e92]: Bills
+            - generic [ref=f11e93]: $310 / $500
+          - generic [ref=f11e96]: 62% used - $190 remaining
+    - generic [ref=f11e97]: "FinSight — Educational Finance Dashboard. Architecture preserved: useState, Lift State Up, Context, Zustand, TanStack Query."

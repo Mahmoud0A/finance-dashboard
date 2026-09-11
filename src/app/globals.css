@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@layer base {
+  :root,
+  [data-theme='light'] {
+    --color-background: #f6f7f9;
+    --color-surface: #ffffff;
+    --color-surface-elevated: #ffffff;
+    --color-surface-muted: #f8fafc;
+    --color-border: #dde3ea;
+    --color-border-subtle: #e8ebf0;
+    --color-border-strong: #94a3b8;
+    --color-ink: #0f172a;
+    --color-text: #0f172a;
+    --color-ink-secondary: #334155;
+    --color-ink-muted: #7c8aa5;
+    --color-muted: #7c8aa5;
+    --color-primary: #059669;
+    --color-primary-light: #10b981;
+    --color-accent: #0d8a68;
+    --color-accent-light: #e6f6f0;
+    --color-positive: #0d8a68;
+    --color-positive-subtle: #e6f6f0;
+    --color-negative: #d10f45;
+    --color-negative-subtle: #fceeea;
+    --color-danger: #d10f45;
+    --color-warning: #b7791f;
+    --color-warning-subtle: #fff4d6;
+    --radius-md: 12px;
+    --radius-lg: 14px;
+    --radius-xl: 18px;
+    --shadow-xs: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+    --shadow-sm: 0 8px 22px rgba(15, 23, 42, 0.06);
+  }
+
+  [data-theme='dark'] {
+    --color-background: #0b1120;
+    --color-surface: #111827;
+    --color-surface-elevated: #162033;
+    --color-surface-muted: #1f2937;
+    --color-border: #334155;
+    --color-border-subtle: #243044;
+    --color-border-strong: #64748b;
+    --color-ink: #f8fafc;
+    --color-text: #f8fafc;
+    --color-ink-secondary: #cbd5e1;
+    --color-ink-muted: #94a3b8;
+    --color-muted: #94a3b8;
+    --color-primary: #10b981;
+    --color-primary-light: #34d399;
+    --color-accent: #34d399;
+    --color-accent-light: rgba(16, 185, 129, 0.16);
+    --color-positive: #34d399;
+    --color-positive-subtle: rgba(16, 185, 129, 0.16);
+    --color-negative: #fb7185;
+    --color-negative-subtle: rgba(251, 113, 133, 0.16);
+    --color-danger: #fb7185;
+    --color-warning: #fbbf24;
+    --color-warning-subtle: rgba(251, 191, 36, 0.16);
+    --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.22), 0 1px 2px rgba(0, 0, 0, 0.18);
+    --shadow-sm: 0 8px 22px rgba(0, 0, 0, 0.26);
+  }
+
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background-color: var(--color-background); color: var(--color-ink); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  h1, h2, h3, h4, h5, h6 { letter-spacing: -0.015em; }
+  ::selection { background: var(--color-accent-light); color: var(--color-ink); }
+}

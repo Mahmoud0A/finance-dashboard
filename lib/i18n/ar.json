@@ -1,0 +1,75 @@
+{
+  "nav": {
+    "dashboard": "لوحة التحكم",
+    "transactions": "المعاملات",
+    "budgets": "الميزانيات",
+    "accounts": "الحسابات",
+    "goals": "الأهداف",
+    "settings": "الإعدادات"
+  },
+  "dashboard": {
+    "totalBalance": "الرصيد الإجمالي",
+    "monthlyIncome": "الدخل الشهري",
+    "monthlyExpenses": "النفقات الشهرية",
+    "savings": "الادخار",
+    "budgetRemaining": "المتبقي في الميزانية",
+    "recentTransactions": "المعاملات الأخيرة",
+    "incomeVsExpenses": "الدخل مقابل النفقات",
+    "expensesByCategory": "النفقات حسب الفئة",
+    "budgetOverview": "نظرة عامة على الميزانية",
+    "accountsOverview": "نظرة عامة على الحسابات",
+    "monthlyTrend": "الاتجاه الشهري لعام 2025",
+    "updatedJustNow": "تم التحديث للتو",
+    "viewAll": "عرض الكل",
+    "overview": "نظرة عامة"
+  },
+  "transactions": {
+    "title": "المعاملات",
+    "searchPlaceholder": "ابحث في المعاملات...",
+    "filterByCategory": "تصفية حسب الفئة",
+    "filterByAccount": "تصفية حسب الحساب",
+    "filterByType": "تصفية حسب النوع",
+    "sortBy": "ترتيب حسب",
+    "addTransaction": "إضافة معاملة",
+    "results": "النتائج",
+    "edit": "تعديل",
+    "delete": "حذف"
+  },
+  "budget": {
+    "title": "الميزانيات",
+    "spent": "تم إنفاقه",
+    "remaining": "المتبقي",
+    "limit": "الحد",
+    "food": "طعام",
+    "transportation": "نقل",
+    "shopping": "تسوق",
+    "entertainment": "ترفيه",
+    "bills": "فواتير"
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "theme": "السمة",
+    "language": "اللغة",
+    "compactMode": "الوضع المدمج",
+    "resetLayout": "إعادة ضبط التخطيط",
+    "dashboardPreferences": "تفضيلات لوحة التحكم"
+  },
+  "common": {
+    "amount": "المبلغ",
+    "date": "التاريخ",
+    "description": "الوصف",
+    "category": "الفئة",
+    "account": "الحساب",
+    "income": "دخل",
+    "expense": "نفقات",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "overview": "نظرة عامة",
+    "monthlyTrend": "الاتجاه الشهري لعام 2025",
+    "viewAll": "عرض الكل",
+    "updatedJustNow": "تم التحديث للتو",
+    "salaryFreelance": "راتب + عمل حر",
+    "foodTransportShopping": "طعام، نقل، تسوق",
+    "accountsLinked": "حسابات مرتبطة"
+  }
+}

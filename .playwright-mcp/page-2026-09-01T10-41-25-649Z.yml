@@ -1,0 +1,55 @@
+- generic [ref=f10e4]:
+  - complementary [ref=f10e5]:
+    - generic [ref=f10e6]:
+      - generic [ref=f10e7]:
+        - button "Toggle sidebar" [ref=f10e8]
+        - text: FinSight
+      - navigation [ref=f10e11]:
+        - link "Dashboard" [ref=f10e12] [cursor=pointer]:
+          - /url: /
+        - link "Transactions" [ref=f10e18] [cursor=pointer]:
+          - /url: /transactions
+        - link "Accounts" [ref=f10e22] [cursor=pointer]:
+          - /url: /accounts
+        - link "Budgets" [ref=f10e26] [cursor=pointer]:
+          - /url: /budgets
+      - link "Settings" [ref=f10e31] [cursor=pointer]:
+        - /url: /settings
+  - main [ref=f10e35]:
+    - generic [ref=f10e37]:
+      - generic [ref=f10e38]:
+        - heading "Dashboard" [level=1] [ref=f10e39]
+        - text: August 2025
+      - generic [ref=f10e40]:
+        - button "Toggle language" [ref=f10e41]: EN
+        - button "Toggle theme" [ref=f10e45]
+    - generic [ref=f10e49]:
+      - generic [ref=f10e50]:
+        - heading "Accounts" [level=1] [ref=f10e51]
+        - text: 4 accounts linked
+      - generic [ref=f10e52]:
+        - link "Main Checking Checking - USD $8,420.50" [ref=f10e53] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=f10e54]:
+            - generic [ref=f10e55]: Main Checking
+            - generic [ref=f10e56]: Checking - USD
+          - generic [ref=f10e57]: $8,420.50
+        - link "Savings Account Savings - USD $15,600.00" [ref=f10e58] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=f10e59]:
+            - generic [ref=f10e60]: Savings Account
+            - generic [ref=f10e61]: Savings - USD
+          - generic [ref=f10e62]: $15,600.00
+        - link "Cash Wallet Cash - USD $320.00" [ref=f10e63] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=f10e64]:
+            - generic [ref=f10e65]: Cash Wallet
+            - generic [ref=f10e66]: Cash - USD
+          - generic [ref=f10e67]: $320.00
+        - link "Travel Credit Credit - USD -$450.75" [ref=f10e68] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=f10e69]:
+            - generic [ref=f10e70]: Travel Credit
+            - generic [ref=f10e71]: Credit - USD
+          - generic [ref=f10e72]: "-$450.75"
+    - generic [ref=f10e73]: "FinSight — Educational Finance Dashboard. Architecture preserved: useState, Lift State Up, Context, Zustand, TanStack Query."

@@ -1,0 +1,180 @@
+- generic [ref=e1]:
+  - generic [ref=e4]:
+    - complementary [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - button "Toggle sidebar" [ref=e8]
+          - generic [ref=e11]: FinSight
+        - navigation [ref=e12]:
+          - link "Dashboard" [ref=e13] [cursor=pointer]:
+            - /url: /
+          - link "Transactions" [ref=e20] [cursor=pointer]:
+            - /url: /transactions
+          - link "Accounts" [ref=e25] [cursor=pointer]:
+            - /url: /accounts
+          - link "Budgets" [ref=e30] [cursor=pointer]:
+            - /url: /budgets
+        - link "Settings" [ref=e36] [cursor=pointer]:
+          - /url: /settings
+    - main [ref=e41]:
+      - generic [ref=e43]:
+        - generic [ref=e44]:
+          - heading "Dashboard" [level=1] [ref=e45]
+          - generic [ref=e46]: August 2025
+        - generic [ref=e47]:
+          - button "Toggle language" [ref=e48]:
+            - generic [ref=e52]: EN
+          - button "Toggle theme" [active] [ref=e53]
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - generic [ref=e59]:
+            - heading "Overview" [level=1] [ref=e60]
+            - paragraph [ref=e61]: Your financial snapshot for August 2025
+          - generic [ref=e62]: Updated just now
+        - generic [ref=e65]:
+          - generic [ref=e66]: Total Balance
+          - generic [ref=e71]: $27,890.75
+          - generic [ref=e72]:
+            - generic [ref=e73]: +2.4% from last month
+            - generic [ref=e77]: 4 accounts linked
+        - generic [ref=e78]:
+          - generic [ref=e79]:
+            - generic [ref=e80]:
+              - generic [ref=e81]: Monthly Income
+              - generic [ref=e82]: +8.2%
+            - generic [ref=e86]: $3,200.00
+            - generic [ref=e87]: Salary + freelance
+          - generic [ref=e88]:
+            - generic [ref=e89]:
+              - generic [ref=e90]: Monthly Expenses
+              - generic [ref=e91]: "-12.1%"
+            - generic [ref=e95]: $654.50
+            - generic [ref=e96]: Food, transport, shopping
+          - generic [ref=e97]:
+            - generic [ref=e98]:
+              - generic [ref=e99]: Monthly Savings
+              - generic [ref=e100]: 79.5% rate
+            - generic [ref=e101]: $2,545.50
+            - generic [ref=e102]: Income - Expenses
+        - generic [ref=e103]:
+          - generic [ref=e104]:
+            - generic [ref=e105]:
+              - generic [ref=e106]:
+                - heading "Income vs Expenses" [level=2] [ref=e107]
+                - paragraph [ref=e108]: Monthly trend for 2025
+              - generic [ref=e109]: Aug 2025
+            - generic [ref=e110]:
+              - img "Income vs expenses chart" [ref=e111]:
+                - generic [ref=e122]: Jan
+                - generic [ref=e123]: Feb
+                - generic [ref=e124]: Mar
+                - generic [ref=e125]: Apr
+                - generic [ref=e126]: May
+              - generic [ref=e127]:
+                - generic [ref=e128]: Income
+                - generic [ref=e130]: Expenses
+          - generic [ref=e132]:
+            - heading "Budget Usage" [level=2] [ref=e133]
+            - paragraph [ref=e134]: August 2025 overview
+            - generic [ref=e135]:
+              - generic [ref=e137]:
+                - generic [ref=e138]: Food
+                - generic [ref=e139]: $420 / $600
+              - generic [ref=e143]:
+                - generic [ref=e144]: Transport
+                - generic [ref=e145]: $120 / $200
+              - generic [ref=e149]:
+                - generic [ref=e150]: Shopping
+                - generic [ref=e151]: $89 / $300
+              - generic [ref=e155]:
+                - generic [ref=e156]: Entertainment
+                - generic [ref=e157]: $35 / $150
+              - generic [ref=e161]:
+                - generic [ref=e162]: Bills
+                - generic [ref=e163]: $310 / $500
+        - generic [ref=e166]:
+          - generic [ref=e167]:
+            - generic [ref=e168]:
+              - heading "Recent Transactions" [level=2] [ref=e169]
+              - link "View all" [ref=e170] [cursor=pointer]:
+                - /url: /transactions
+            - generic [ref=e171]:
+              - link "- Grocery shopping Food - Checking -$45.00 Aug 28" [ref=e172] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e173]: "-"
+                - generic [ref=e174]:
+                  - generic [ref=e175]: Grocery shopping
+                  - generic [ref=e176]: Food - Checking
+                - generic [ref=e177]:
+                  - generic [ref=e178]: "-$45.00"
+                  - generic [ref=e179]: Aug 28
+              - link "+ Monthly salary Salary - Checking +$3,200.00 Aug 01" [ref=e180] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e181]: +
+                - generic [ref=e182]:
+                  - generic [ref=e183]: Monthly salary
+                  - generic [ref=e184]: Salary - Checking
+                - generic [ref=e185]:
+                  - generic [ref=e186]: +$3,200.00
+                  - generic [ref=e187]: Aug 01
+              - link "- Metro pass Transport - Savings -$120.00 Aug 15" [ref=e188] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e189]: "-"
+                - generic [ref=e190]:
+                  - generic [ref=e191]: Metro pass
+                  - generic [ref=e192]: Transport - Savings
+                - generic [ref=e193]:
+                  - generic [ref=e194]: "-$120.00"
+                  - generic [ref=e195]: Aug 15
+              - link "- Movie night Entertainment - Cash -$35.00 Aug 20" [ref=e196] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e197]: "-"
+                - generic [ref=e198]:
+                  - generic [ref=e199]: Movie night
+                  - generic [ref=e200]: Entertainment - Cash
+                - generic [ref=e201]:
+                  - generic [ref=e202]: "-$35.00"
+                  - generic [ref=e203]: Aug 20
+              - link "- Online order Shopping - Credit -$89.50 Aug 22" [ref=e204] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e205]: "-"
+                - generic [ref=e206]:
+                  - generic [ref=e207]: Online order
+                  - generic [ref=e208]: Shopping - Credit
+                - generic [ref=e209]:
+                  - generic [ref=e210]: "-$89.50"
+                  - generic [ref=e211]: Aug 22
+          - generic [ref=e212]:
+            - heading "Accounts" [level=2] [ref=e213]
+            - paragraph [ref=e214]: Your linked accounts
+            - generic [ref=e215]:
+              - link "Main Checking Checking - USD $8,420.50" [ref=e216] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e217]:
+                  - generic [ref=e218]: Main Checking
+                  - generic [ref=e219]: Checking - USD
+                - generic [ref=e220]: $8,420.50
+              - link "Savings Account Savings - USD $15,600.00" [ref=e221] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e222]:
+                  - generic [ref=e223]: Savings Account
+                  - generic [ref=e224]: Savings - USD
+                - generic [ref=e225]: $15,600.00
+              - link "Cash Wallet Cash - USD $320.00" [ref=e226] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e227]:
+                  - generic [ref=e228]: Cash Wallet
+                  - generic [ref=e229]: Cash - USD
+                - generic [ref=e230]: $320.00
+              - link "Travel Credit Credit - USD -$450.75" [ref=e231] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e232]:
+                  - generic [ref=e233]: Travel Credit
+                  - generic [ref=e234]: Credit - USD
+                - generic [ref=e235]: "-$450.75"
+      - generic [ref=e236]: "FinSight — Educational Finance Dashboard. Architecture preserved: useState, Lift State Up, Context, Zustand, TanStack Query."
+  - status [ref=e254]:
+    - generic [ref=e259]:
+      - text: Static route
+      - button "Hide static indicator" [ref=e260] [cursor=pointer]
+  - alert [ref=e247]

@@ -1,0 +1,117 @@
+- generic [ref=f3e4]:
+  - complementary [ref=f3e5]:
+    - generic [ref=f3e6]:
+      - generic [ref=f3e7]:
+        - button "Toggle sidebar" [ref=f3e8]
+        - generic [ref=f3e11]: FinSight
+      - navigation [ref=f3e12]:
+        - link "Dashboard" [ref=f3e13] [cursor=pointer]:
+          - /url: /
+        - link "Transactions" [ref=f3e20] [cursor=pointer]:
+          - /url: /transactions
+        - link "Accounts" [ref=f3e25] [cursor=pointer]:
+          - /url: /accounts
+        - link "Budgets" [ref=f3e30] [cursor=pointer]:
+          - /url: /budgets
+      - link "Settings" [ref=f3e36] [cursor=pointer]:
+        - /url: /settings
+  - main [ref=f3e41]:
+    - generic [ref=f3e43]:
+      - generic [ref=f3e44]:
+        - heading "Dashboard" [level=1] [ref=f3e45]
+        - generic [ref=f3e46]: August 2025
+      - generic [ref=f3e47]:
+        - button "Toggle language" [ref=f3e48]:
+          - generic [ref=f3e52]: EN
+        - button "Toggle theme" [ref=f3e53]
+    - generic [ref=f3e57]:
+      - heading "Transactions" [level=1] [ref=f3e59]
+      - generic [ref=f3e61]:
+        - textbox [ref=f3e63]:
+          - /placeholder: Search transactions...
+        - combobox [ref=f3e64]:
+          - option "All categories" [selected]
+          - option "Food"
+          - option "Transportation"
+          - option "Entertainment"
+          - option "Shopping"
+          - option "Bills"
+          - option "Salary"
+        - combobox [ref=f3e65]:
+          - option "All accounts" [selected]
+          - option "Main Checking"
+          - option "Savings"
+          - option "Cash"
+          - option "Credit"
+        - combobox [ref=f3e66]:
+          - option "All types" [selected]
+          - option "Income"
+          - option "Expense"
+        - combobox [ref=f3e67]:
+          - option "Newest first" [selected]
+          - option "Oldest first"
+          - option "Highest amount"
+          - option "Lowest amount"
+      - generic [ref=f3e68]:
+        - generic [ref=f3e69]:
+          - text: "Results:"
+          - strong [ref=f3e70]: "5"
+        - generic [ref=f3e72]:
+          - text: "Category:"
+          - strong [ref=f3e73]: All
+        - generic [ref=f3e75]:
+          - text: "Account:"
+          - strong [ref=f3e76]: All
+        - generic [ref=f3e78]:
+          - text: "Type:"
+          - strong [ref=f3e79]: All
+      - table [ref=f3e81]:
+        - rowgroup [ref=f3e82]:
+          - row [ref=f3e83]:
+            - columnheader "Date" [ref=f3e84]
+            - columnheader "Description" [ref=f3e85]
+            - columnheader "Category" [ref=f3e86]
+            - columnheader "Account" [ref=f3e87]
+            - columnheader "Amount" [ref=f3e88]
+        - rowgroup [ref=f3e89]:
+          - row [ref=f3e90]:
+            - cell "Aug 28" [ref=f3e91]
+            - cell [ref=f3e92]:
+              - link "Grocery shopping" [ref=f3e93] [cursor=pointer]:
+                - /url: "#"
+            - cell "Food" [ref=f3e94]
+            - cell "Main Checking" [ref=f3e95]
+            - cell "-$45.00" [ref=f3e96]
+          - row [ref=f3e97]:
+            - cell "Aug 01" [ref=f3e98]
+            - cell [ref=f3e99]:
+              - link "Monthly salary" [ref=f3e100] [cursor=pointer]:
+                - /url: "#"
+            - cell "Salary" [ref=f3e101]
+            - cell "Main Checking" [ref=f3e102]
+            - cell "+$3,200.00" [ref=f3e103]
+          - row [ref=f3e104]:
+            - cell "Aug 15" [ref=f3e105]
+            - cell [ref=f3e106]:
+              - link "Metro pass" [ref=f3e107] [cursor=pointer]:
+                - /url: "#"
+            - cell "Transport" [ref=f3e108]
+            - cell "Savings" [ref=f3e109]
+            - cell "-$120.00" [ref=f3e110]
+          - row [ref=f3e111]:
+            - cell "Aug 20" [ref=f3e112]
+            - cell [ref=f3e113]:
+              - link "Movie night" [ref=f3e114] [cursor=pointer]:
+                - /url: "#"
+            - cell "Entertainment" [ref=f3e115]
+            - cell "Cash" [ref=f3e116]
+            - cell "-$35.00" [ref=f3e117]
+          - row [ref=f3e118]:
+            - cell "Aug 22" [ref=f3e119]
+            - cell [ref=f3e120]:
+              - link "Online order" [ref=f3e121] [cursor=pointer]:
+                - /url: "#"
+            - cell "Shopping" [ref=f3e122]
+            - cell "Credit" [ref=f3e123]
+            - cell "-$89.50" [ref=f3e124]
+    - generic [ref=f3e125]: "FinSight — Educational Finance Dashboard. Architecture preserved: useState, Lift State Up, Context, Zustand, TanStack Query."
