@@ -162,8 +162,6 @@ Live demo: https://finance-dashboard-xi-ecru-77.vercel.app
 
 ![English dashboard with derived totals, monthly chart and budgets](docs/screenshots/dashboard-en.png)
 
-![Add Transaction form with validation](docs/screenshots/transactions-form.png)
-
 ![Arabic RTL dashboard](docs/screenshots/dashboard-ar.png)
 
 ---
