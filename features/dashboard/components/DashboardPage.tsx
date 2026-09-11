@@ -46,7 +46,7 @@ function ChartCard({ summary, locale, t }: { summary: DashboardSummary; locale: 
   const H = 200;
   const base = 160;
   const top = 24;
-  const scale = (H - base - (H - top)) / max || 0;
+  const scale = (base - top) / max;
   const n = points.length;
   const slot = (W - 40) / n;
   const barW = Math.min(26, slot / 2 - 6);
@@ -311,7 +311,7 @@ export default function DashboardPage() {
         {!isHidden('accounts') && (
           <div className="bg-[var(--color-surface)] border border-[var(--color-border-subtle)] rounded-2xl shadow-sm p-6">
             <h2 className="text-base font-bold tracking-tight text-[var(--color-ink)] mb-1">{t('dashboard.accountsOverview')}</h2>
-            <p className="text-xs text-[var(--color-ink-muted)] mb-5">{t('common.accountsLinked')}</p>
+            <p className="text-xs text-[var(--color-ink-muted)] mb-5">{accounts.length} {t('common.accountsLinked')}</p>
             <div className="space-y-3">
               {accounts.map((acc) => (
                 <div key={acc.id} className="flex items-center justify-between p-3 rounded-xl bg-[var(--color-surface-elevated)]">
