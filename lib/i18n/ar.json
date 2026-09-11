@@ -31,9 +31,24 @@
     "filterByType": "تصفية حسب النوع",
     "sortBy": "ترتيب حسب",
     "addTransaction": "إضافة معاملة",
+    "addNew": "+ إضافة معاملة",
     "results": "النتائج",
+    "category": "الفئة",
+    "account": "الحساب",
+    "type": "النوع",
     "edit": "تعديل",
     "delete": "حذف"
+  },
+  "budgets": {
+    "title": "الميزانيات",
+    "spent": "تم إنفاقه",
+    "remaining": "المتبقي",
+    "limit": "الحد",
+    "food": "طعام",
+    "transportation": "نقل",
+    "shopping": "تسوق",
+    "entertainment": "ترفيه",
+    "bills": "فواتير"
   },
   "budget": {
     "title": "الميزانيات",
@@ -70,6 +85,10 @@
     "updatedJustNow": "تم التحديث للتو",
     "salaryFreelance": "راتب + عمل حر",
     "foodTransportShopping": "طعام، نقل، تسوق",
-    "accountsLinked": "حسابات مرتبطة"
+    "accountsLinked": "حسابات مرتبطة",
+    "fromLastMonth": "مقارنة بالشهر الماضي",
+    "loading": "جاري التحميل...",
+    "error": "فشل تحميل البيانات.",
+    "noResults": "لا توجد معاملات."
   }
 }

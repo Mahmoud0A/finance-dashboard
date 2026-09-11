@@ -31,9 +31,24 @@
     "filterByType": "Filter by type",
     "sortBy": "Sort by",
     "addTransaction": "Add Transaction",
+    "addNew": "+ Add Transaction",
     "results": "Results",
+    "category": "Category",
+    "account": "Account",
+    "type": "Type",
     "edit": "Edit",
     "delete": "Delete"
+  },
+  "budgets": {
+    "title": "Budgets",
+    "spent": "Spent",
+    "remaining": "Remaining",
+    "limit": "Limit",
+    "food": "Food",
+    "transportation": "Transportation",
+    "shopping": "Shopping",
+    "entertainment": "Entertainment",
+    "bills": "Bills"
   },
   "budget": {
     "title": "Budgets",
@@ -70,6 +85,10 @@
     "updatedJustNow": "Updated just now",
     "salaryFreelance": "Salary + freelance",
     "foodTransportShopping": "Food, transport, shopping",
-    "accountsLinked": "accounts linked"
+    "accountsLinked": "accounts linked",
+    "fromLastMonth": "from last month",
+    "loading": "Loading...",
+    "error": "Failed to load data.",
+    "noResults": "No transactions found."
   }
 }
