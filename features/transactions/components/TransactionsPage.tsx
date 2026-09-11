@@ -1,60 +1,111 @@
 'use client';
 import React, { useState } from 'react';
-import { useQuery } from '@tanstack/react-query';
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import TransactionRow from './TransactionRow';
 import TransactionFilters from './TransactionFilters';
 import TransactionForm from './TransactionForm';
 import { TransactionFilters as FilterType } from '../types/transaction.types';
 import { useI18n } from '@/lib/i18n/context';
-import type { Transaction } from '@/lib/mockData';
+import type { Account, Transaction } from '@/lib/mockData';
+import type { TransactionFormData } from '../schemas/transactionSchema';
 
-// Fetch from the Next.js API route — demonstrates TanStack Query server-state pattern
+// Fetch from the Next.js API routes — TanStack Query server-state pattern
 async function fetchTransactions(): Promise<Transaction[]> {
   const res = await fetch('/api/transactions');
   if (!res.ok) throw new Error('Failed to fetch transactions');
   return res.json();
 }
 
+async function fetchAccounts(): Promise<Account[]> {
+  const res = await fetch('/api/accounts');
+  if (!res.ok) throw new Error('Failed to fetch accounts');
+  return res.json();
+}
+
+async function postTransaction(data: TransactionFormData): Promise<Transaction> {
+  const res = await fetch('/api/transactions', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data),
+  });
+  if (!res.ok) {
+    const payload = await res.json().catch(() => null);
+    throw new Error(payload?.error || 'Failed to create transaction');
+  }
+  return res.json();
+}
+
 function TransactionSummary({ filters, count }: { filters: FilterType; count: number }) {
   const { t } = useI18n();
+  const all = t('common.all');
   return (
     <div className="flex items-center gap-3 text-[12.5px] text-[var(--color-ink-muted)]">
       <span>{t('transactions.results')}: <strong className="text-[var(--color-ink)]">{count}</strong></span>
       <span className="w-1 h-1 rounded-full bg-[var(--color-border-strong)]"></span>
-      <span>{t('transactions.category')}: <strong className="text-[var(--color-ink)]">{filters.category || 'All'}</strong></span>
+      <span>{t('transactions.category')}: <strong className="text-[var(--color-ink)]">{filters.category || all}</strong></span>
       <span className="w-1 h-1 rounded-full bg-[var(--color-border-strong)]"></span>
-      <span>{t('transactions.account')}: <strong className="text-[var(--color-ink)]">{filters.account || 'All'}</strong></span>
+      <span>{t('transactions.account')}: <strong className="text-[var(--color-ink)]">{filters.account || all}</strong></span>
       <span className="w-1 h-1 rounded-full bg-[var(--color-border-strong)]"></span>
-      <span>{t('transactions.type')}: <strong className="text-[var(--color-ink)]">{filters.type || 'All'}</strong></span>
+      <span>{t('transactions.type')}: <strong className="text-[var(--color-ink)]">{filters.type || all}</strong></span>
     </div>
   );
 }
 
 export default function TransactionsPage() {
   const { t } = useI18n();
+  const queryClient = useQueryClient();
   const [filters, setFilters] = useState<FilterType>({ search: '', category: '', account: '', type: '', sort: 'date-desc' });
   const [showForm, setShowForm] = useState(false);
 
-  // TanStack Query: server-state — fetches from the /api/transactions route
+  // TanStack Query: server-state — reads from the /api/* routes
   const { data: transactions = [], isLoading, isError } = useQuery<Transaction[]>({
     queryKey: ['transactions'],
     queryFn: fetchTransactions,
   });
+  const { data: accounts = [] } = useQuery<Account[]>({
+    queryKey: ['accounts'],
+    queryFn: fetchAccounts,
+  });
 
-  // Local filter applied on top of server data (local-state pattern)
+  // TanStack Query mutation: creating a transaction touches transactions,
+  // account balances, budgets and the dashboard summary — invalidate them all.
+  const createMutation = useMutation({
+    mutationFn: postTransaction,
+    onSuccess: () => {
+      setShowForm(false);
+      queryClient.invalidateQueries({ queryKey: ['transactions'] });
+      queryClient.invalidateQueries({ queryKey: ['accounts'] });
+      queryClient.invalidateQueries({ queryKey: ['budgets'] });
+      queryClient.invalidateQueries({ queryKey: ['dashboard-summary'] });
+    },
+  });
+
+  const accountName = (id: string) => accounts.find((a) => a.id === id)?.name ?? id;
+
+  // Local filter applied on top of server data (lifted-state pattern)
   const filtered = transactions.filter((tx) => {
     if (filters.type && tx.type !== filters.type) return false;
     if (filters.category && tx.category !== filters.category) return false;
+    if (filters.account && tx.accountId !== filters.account) return false;
     if (filters.search && !tx.description.toLowerCase().includes(filters.search.toLowerCase())) return false;
     return true;
   });
 
-  const rows = filtered.map((tx) => ({
+  const sorted = [...filtered].sort((a, b) => {
+    switch (filters.sort) {
+      case 'date-asc': return a.date < b.date ? -1 : 1;
+      case 'amount-desc': return b.amount - a.amount;
+      case 'amount-asc': return a.amount - b.amount;
+      default: return a.date < b.date ? 1 : -1;
+    }
+  });
+
+  const rows = sorted.map((tx) => ({
     id: tx.id,
     date: tx.date,
     description: tx.description,
     category: tx.category,
-    account: tx.accountId,
+    account: accountName(tx.accountId),
     type: tx.type as 'income' | 'expense',
     amount: tx.amount,
   }));
@@ -66,17 +117,22 @@ export default function TransactionsPage() {
           {t('transactions.title')}
         </h1>
         <button
-          onClick={() => setShowForm((s) => !s)}
+          onClick={() => { createMutation.reset(); setShowForm((s) => !s); }}
           className="px-4 py-2 rounded-lg bg-[var(--color-primary)] text-white text-sm font-medium hover:opacity-90 transition-opacity"
         >
-          {showForm ? t('common.cancel') || 'Cancel' : t('transactions.addNew') || '+ Add Transaction'}
+          {showForm ? t('common.cancel') : t('transactions.addNew')}
         </button>
       </div>
 
       {showForm && (
         <div className="bg-[var(--color-surface)] border border-[var(--color-border-subtle)] rounded-2xl p-6 shadow-sm">
-          <h2 className="text-base font-bold text-[var(--color-ink)] mb-4">{t('transactions.addNew') || 'Add Transaction'}</h2>
-          <TransactionForm onSuccess={() => setShowForm(false)} />
+          <h2 className="text-base font-bold text-[var(--color-ink)] mb-4">{t('transactions.addNew')}</h2>
+          <TransactionForm
+            accounts={accounts}
+            isSubmitting={createMutation.isPending}
+            submitError={createMutation.isError ? t('form.submitError') : null}
+            onSubmit={(data) => createMutation.mutate(data)}
+          />
         </div>
       )}
 
@@ -86,12 +142,12 @@ export default function TransactionsPage() {
       <div className="bg-[var(--color-surface)] border border-[var(--color-border-subtle)] rounded-[var(--radius-xl)] shadow-[var(--shadow-xs)] overflow-hidden">
         {isLoading && (
           <div className="px-6 py-8 text-center text-sm text-[var(--color-ink-muted)]">
-            {t('common.loading') || 'Loading...'}
+            {t('common.loading')}
           </div>
         )}
         {isError && (
           <div className="px-6 py-8 text-center text-sm text-[var(--color-danger)]">
-            {t('common.error') || 'Failed to load transactions.'}
+            {t('common.error')}
           </div>
         )}
         {!isLoading && !isError && (
@@ -109,7 +165,7 @@ export default function TransactionsPage() {
               {rows.length === 0 ? (
                 <tr>
                   <td colSpan={5} className="text-center px-5 py-8 text-sm text-[var(--color-ink-muted)]">
-                    {t('common.noResults') || 'No transactions found.'}
+                    {t('common.noResults')}
                   </td>
                 </tr>
               ) : (

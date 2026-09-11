@@ -16,9 +16,9 @@ export default function TransactionRow({ date, description, category, account, t
     <tr className="group transition-colors hover:bg-[var(--color-surface-elevated)]">
       <td className="whitespace-nowrap px-5 py-3.5 text-[var(--color-ink-muted)]">{date}</td>
       <td className="px-4 py-3.5">
-        <a href="#" className="font-medium text-[var(--color-ink)] transition-colors hover:text-[var(--color-accent)] hover:underline">
+        <span className="font-medium text-[var(--color-ink)]">
           {description}
-        </a>
+        </span>
       </td>
       <td className="px-4 py-3.5 text-[var(--color-ink-muted)]">{category}</td>
       <td className="px-4 py-3.5 text-[var(--color-ink-muted)]">{account}</td>

@@ -26,6 +26,8 @@
     --color-danger: #d10f45;
     --color-warning: #b7791f;
     --color-warning-subtle: #fff4d6;
+    --color-sidebar: #0f172a;
+    --color-sidebar-ink: #ffffff;
     --radius-md: 12px;
     --radius-lg: 14px;
     --radius-xl: 18px;
@@ -57,6 +59,8 @@
     --color-danger: #fb7185;
     --color-warning: #fbbf24;
     --color-warning-subtle: rgba(251, 191, 36, 0.16);
+    --color-sidebar: #0b1120;
+    --color-sidebar-ink: #f1f5f9;
     --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.22), 0 1px 2px rgba(0, 0, 0, 0.18);
     --shadow-sm: 0 8px 22px rgba(0, 0, 0, 0.26);
   }

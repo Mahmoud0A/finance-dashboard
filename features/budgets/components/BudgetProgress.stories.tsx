@@ -16,6 +16,9 @@ const meta = {
     category: 'Food',
     spent: 420,
     limit: 600,
+    usedLabel: 'used',
+    remainingLabel: 'remaining',
+    overLabel: 'over budget',
   },
   decorators: [
     (Story) => (

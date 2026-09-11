@@ -16,7 +16,7 @@ export default function MobileNav() {
   ];
 
   return (
-    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[var(--color-ink)] border-t border-white/10 text-white px-2 py-2 shadow-[0_-8px_30px_rgba(0,0,0,0.15)]">
+    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[var(--color-sidebar)] border-t border-white/10 text-[var(--color-sidebar-ink)] px-2 py-2 shadow-[0_-8px_30px_rgba(0,0,0,0.15)]">
       <div className="flex justify-around items-center">
         {navItems.map((item) => {
           const active = pathname === item.href || pathname?.startsWith(item.href + '/');

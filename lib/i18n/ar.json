@@ -10,8 +10,8 @@
   "dashboard": {
     "totalBalance": "الرصيد الإجمالي",
     "monthlyIncome": "الدخل الشهري",
-    "monthlyExpenses": "النفقات الشهرية",
-    "savings": "الادخار",
+    "monthlyExpenses": "المصروفات الشهرية",
+    "savings": "صافي التدفق النقدي",
     "budgetRemaining": "المتبقي في الميزانية",
     "recentTransactions": "المعاملات الأخيرة",
     "incomeVsExpenses": "الدخل مقابل النفقات",
@@ -43,17 +43,7 @@
     "title": "الميزانيات",
     "spent": "تم إنفاقه",
     "remaining": "المتبقي",
-    "limit": "الحد",
-    "food": "طعام",
-    "transportation": "نقل",
-    "shopping": "تسوق",
-    "entertainment": "ترفيه",
-    "bills": "فواتير"
-  },
-  "budget": {
-    "title": "الميزانيات",
-    "spent": "تم إنفاقه",
-    "remaining": "المتبقي",
+    "over": "تجاوز الميزانية",
     "limit": "الحد",
     "food": "طعام",
     "transportation": "نقل",
@@ -89,6 +79,71 @@
     "fromLastMonth": "مقارنة بالشهر الماضي",
     "loading": "جاري التحميل...",
     "error": "فشل تحميل البيانات.",
-    "noResults": "لا توجد معاملات."
+    "noResults": "لا توجد معاملات.",
+    "retry": "إعادة المحاولة",
+    "customize": "تخصيص",
+    "widgets": "الودجت",
+    "rate": "المعدل",
+    "vsLastMonth": "مقارنة بالشهر الماضي",
+    "netCashFlowNote": "الدخل مطروحًا منه المصروفات",
+    "close": "إغلاق",
+    "on": "تشغيل",
+    "off": "إيقاف",
+    "all": "الكل"
+  },
+  "filters": {
+    "toggle": "عوامل التصفية",
+    "search": "ابحث في المعاملات...",
+    "allCategories": "كل الفئات",
+    "allAccounts": "كل الحسابات",
+    "allTypes": "كل الأنواع",
+    "newest": "الأحدث أولًا",
+    "oldest": "الأقدم أولًا",
+    "highestAmount": "الأعلى مبلغًا",
+    "lowestAmount": "الأقل مبلغًا"
+  },
+  "form": {
+    "description": "الوصف",
+    "descriptionPlaceholder": "مثال: تسوق البقالة",
+    "amount": "المبلغ",
+    "type": "النوع",
+    "category": "الفئة",
+    "account": "الحساب",
+    "date": "التاريخ",
+    "note": "ملاحظة (اختياري)",
+    "notePlaceholder": "ملاحظة اختيارية",
+    "save": "حفظ المعاملة",
+    "saving": "جارٍ الحفظ...",
+    "submitError": "تعذر حفظ المعاملة. حاول مرة أخرى.",
+    "errors": {
+      "description": "يجب أن يكون الوصف حرفين على الأقل.",
+      "amount": "يجب أن يكون المبلغ أكبر من صفر.",
+      "category": "الفئة مطلوبة.",
+      "account": "الحساب مطلوب.",
+      "date": "التاريخ مطلوب.",
+      "type": "اختر دخل أو مصروف."
+    }
+  },
+  "accounts": {
+    "title": "الحسابات",
+    "linked": "حسابات مرتبطة",
+    "checking": "جاري",
+    "savings": "توفير",
+    "cash": "نقدي",
+    "credit": "ائتماني"
+  },
+  "settingsPage": {
+    "title": "الإعدادات",
+    "theme": "السمة",
+    "themeNote": "الوضع الفاتح أو الداكن",
+    "language": "اللغة",
+    "languageNote": "الإنجليزية أو العربية",
+    "compactMode": "الوضع المدمج",
+    "compactNote": "تقليل التباعد في لوحة التحكم",
+    "resetLayout": "إعادة ضبط التخطيط",
+    "resetNote": "استعادة ترتيب الودجت الافتراضي",
+    "light": "فاتح",
+    "dark": "داكن",
+    "reset": "إعادة ضبط"
   }
 }

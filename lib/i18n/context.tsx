@@ -1,5 +1,5 @@
 'use client';
-import { createContext, useContext, useState, useCallback } from 'react';
+import { createContext, useContext, useState, useCallback, useEffect } from 'react';
 import en from './en.json';
 import ar from './ar.json';
 
@@ -45,6 +45,12 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     (key: string) => resolveSimplePath(key, dictionary),
     [dictionary]
   );
+
+  // Keep <html> language/direction semantics in sync (hydration-safe: runs client-side only)
+  useEffect(() => {
+    document.documentElement.lang = locale;
+    document.documentElement.dir = locale === 'ar' ? 'rtl' : 'ltr';
+  }, [locale]);
 
   return (
     <I18nContext.Provider value={{ locale, dictionary, setLocale, t }}>

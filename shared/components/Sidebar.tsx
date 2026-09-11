@@ -25,7 +25,7 @@ export default function Sidebar() {
   };
 
   return (
-    <aside className={`hidden md:block fixed top-0 ${locale === 'ar' ? 'right-0' : 'left-0'} h-screen z-50 bg-[var(--color-ink)] text-white transition-all duration-300 ease-out ${sidebarCollapsed ? 'w-[72px]' : 'w-[240px]'}`}>
+    <aside className={`hidden md:block fixed top-0 ${locale === 'ar' ? 'right-0' : 'left-0'} h-screen z-50 bg-[var(--color-sidebar)] text-[var(--color-sidebar-ink)] transition-all duration-300 ease-out ${sidebarCollapsed ? 'w-[72px]' : 'w-[240px]'}`}>
       <div className="flex flex-col h-full px-4 py-6">
         <div className="flex items-center gap-3 mb-10">
           <button onClick={toggleSidebar} className="p-1.5 rounded-lg hover:bg-white/10 transition-colors" aria-label="Toggle sidebar">
